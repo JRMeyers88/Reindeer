@@ -1,14 +1,23 @@
-var colors = ["Blue", "Red", "Orange", "Purple", "Hazel", "Aquamarine", "Periwinkle", "Azure", "Fuchsia", "Chocolate", "Amber", "Amaranth"];
-var reindeer = ["Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"];
+var colors = ["Blue", "Red", "Orange", "Purple", "Hazel", "Aquamarine", "Periwinkle", "Azure", "Olive", "Chocolate", "Amber", "Amaranth"];
+var reindeer = ["Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen", "Olive"];
 
 // console.log(reindeer[0]);
 
 var hohohoElement = document.getElementById("reindeer");
+var shorty;
 
-for (var i = 0; i < reindeer.length; i++) {        
-	hohohoElement.innerHTML += '<div>' + colors[i] + ' ' + reindeer[i] + '</div>';
-	console.log(reindeer[i]);
-        }
+if (reindeer.length > colors.length) {
+	shorty = colors;
+} else {
+	shorty = reindeer;
+}
+
+for (var i = 0; i < shorty.length; i++) {        
+	// hohohoElement.innerHTML += '<div>' + colors[i] + ' ' + reindeer[i] + '</div>';
+	hohohoElement.innerHTML += `<div>${colors[i]} ${reindeer[i]}</div>`;
+    }
+	
+	
 
 
 
